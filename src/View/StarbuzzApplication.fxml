@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StarbuzzApplicationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" styleClass="bodyBackground" stylesheets="@StarbuzzApplicationStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StarbuzzApplicationController">
 
       <Button fx:id="exitButton" layoutX="134.0" layoutY="304.0" mnemonicParsing="false" onAction="#onExit" prefHeight="30.0" prefWidth="129.0" text="Salir" />
       <Button fx:id="loginButton" layoutX="378.0" layoutY="304.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="30.0" prefWidth="129.0" text="Entrar" />
