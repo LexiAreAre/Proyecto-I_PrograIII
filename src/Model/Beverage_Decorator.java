@@ -2,7 +2,7 @@ package Model;
 
 public class Beverage_Decorator implements Beverage{
     private Beverage basic_decorator;
-    Beverage_Decorator(Beverage b_d){
+    public Beverage_Decorator(Beverage b_d){
 
     }
 
