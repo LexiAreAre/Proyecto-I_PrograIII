@@ -1,0 +1,4 @@
+.logoBackground{
+    -fx-background-image: url('starbuzz_logo.png');
+    -fx-background-size: 100% 100%;
+}
