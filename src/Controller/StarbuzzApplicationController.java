@@ -1,10 +1,15 @@
 package Controller;
 
+import Model.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class StarbuzzApplicationController {
 
@@ -26,7 +31,19 @@ public class StarbuzzApplicationController {
     }
 
     @FXML
-    void onLogin(ActionEvent event) {
-
+    void onLogin() {
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("../View/StarbuzzApplicationCoffee.fxml"));
+            AnchorPane window = loader.load();
+            Scene scene = new Scene(window);
+            Main.current.hide();
+            Main.current.setScene(scene);
+            Main.current.setResizable(true);
+            Main.current.show();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }

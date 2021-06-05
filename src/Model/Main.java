@@ -1,13 +1,15 @@
 package Model;
 
 import javafx.application.Application;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
+
+    // current will be the only stage in all program's life
+    public static Stage current = null;
 
     public static void main(String[] args){
         try{
@@ -24,8 +26,9 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("../View/StarbuzzApplication.fxml"));
         AnchorPane window = loader.load();
         Scene scene = new Scene(window);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        current = stage;
+        current.setScene(scene);
+        current.setResizable(false);
+        current.show();
     }
 }

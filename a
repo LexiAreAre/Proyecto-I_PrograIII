@@ -1,0 +1,84 @@
+[33mcommit c4bd1c13cd47b54ea960e72eb1a93ec6d85612d3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Thu Jun 3 13:36:21 2021 -0600
+
+    Applied CSS file and attached image background to the view
+
+[33mcommit 7a0c76134b5b977ab02270d9ff9026547aa4a3cd[m
+Merge: a455d17 e2ff989
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Thu Jun 3 13:24:16 2021 -0600
+
+    Merge remote-tracking branch 'origin/main' into main
+
+[33mcommit a455d175b91f4da35d7d437e4ae86a36956f1e8a[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Thu Jun 3 13:23:37 2021 -0600
+
+    Basic FXML and Window scene working properly
+
+[33mcommit e2ff989bf0eec0a06f43f437a94e32f1055a2b24[m
+Author: No.RM907A <53484018+NoirRM907A@users.noreply.github.com>
+Date:   Thu Jun 3 12:23:26 2021 -0600
+
+    Added image
+
+[33mcommit ea492b18ad4c7fc4eb766ef155ff05215b625fd9[m
+Author: No.RM907A <53484018+NoirRM907A@users.noreply.github.com>
+Date:   Thu Jun 3 09:38:36 2021 -0600
+
+    GUI (test)
+
+[33mcommit 5c3443478eed078022d83dd95ee44eb7bbea01a8[m
+Author: SebThunder <sebmonterovincenzi@gmail.com>
+Date:   Wed Jun 2 13:05:24 2021 -0600
+
+    GitHub test
+
+[33mcommit 6080954c472622e55a66d4fd58f34ed5735c12ca[m
+Author: SebThunder <sebmonterovincenzi@gmail.com>
+Date:   Mon May 31 21:02:33 2021 -0600
+
+    Test GitHub download/upload
+
+[33mcommit 26a6cdef88056ba3958006804eb2430af68b4731[m
+Author: No.RM907A <53484018+NoirRM907A@users.noreply.github.com>
+Date:   Sun May 30 15:30:10 2021 -0600
+
+    Added Beverage, Dark_Roast, Decaf, Expresso, House_Blend
+
+[33mcommit 91ab503ffa209b8c1959a3bb580446896b655012[m
+Author: No.RM907A <53484018+NoirRM907A@users.noreply.github.com>
+Date:   Sun May 30 13:36:42 2021 -0600
+
+    Commit test
+
+[33mcommit dc12d1b99515afccab3df096bf6f767d555d6697[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Sun May 30 12:37:39 2021 -0600
+
+    Basic structure finished
+
+[33mcommit 261eb475de40fd1af79bda47a6ab35e98e3c6d6a[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Sun May 30 11:49:53 2021 -0600
+
+    Preparation phase
+
+[33mcommit 6db7c68d6bb513f451ac163ae255088dce8d8cfa[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Sun May 30 11:26:58 2021 -0600
+
+    Added SDK abd JDK libraries in order to use JavaFX
+
+[33mcommit c3c5c97710c78ef138cb30e07acd2ba01395db7c[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Sun May 30 11:18:11 2021 -0600
+
+    first commit
+
+[33mcommit 58626bec7d993cf14e73b9440e6e61596cd09ecc[m
+Author: Alexander Ramirez <alexram999rc@gmail.com>
+Date:   Wed May 26 16:53:07 2021 -0600
+
+    Initial commit

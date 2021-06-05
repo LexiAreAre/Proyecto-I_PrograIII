@@ -14,6 +14,6 @@ public class Milk_Foam extends Beverage_Decorator{
 
     @Override
     public float getCost() {
-        return 0;
+        return super.getCost() + 300;
     }
 }

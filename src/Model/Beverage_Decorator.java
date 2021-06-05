@@ -13,6 +13,11 @@ public class Beverage_Decorator implements Beverage{
 
     @Override
     public float getCost() {
-        return 0;
+        return basic_decorator.getCost();
     }
 }
+
+
+
+//          Beverage bd = new BebeverageDecorator();
+//
