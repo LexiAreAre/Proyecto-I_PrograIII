@@ -2,8 +2,20 @@ package Model;
 
 public class Decaf implements Beverage{
 
+    //Atributos----------------------------------------------------------------------------------------
+    float costo;
+    String description;
+    // __________________________________________________________________________________________________
 //Métodos-----------------------------------------------------------------------------------------------
 
+
+    Decaf(){
+
+        costo=2500;
+        description="Descaf";
+
+
+    }
     @Override
     public String getDescription() {
         return description;
@@ -11,7 +23,7 @@ public class Decaf implements Beverage{
 
     @Override
     public float getCost() {
-        return 0;
+        return costo;
     }
 
 //------------------------------------------------------------------------------------------------------
