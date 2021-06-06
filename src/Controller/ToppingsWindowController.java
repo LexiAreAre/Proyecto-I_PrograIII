@@ -4,7 +4,9 @@ package Controller;
 import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogPane;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -57,7 +59,12 @@ public class ToppingsWindowController {
 
     @FXML
     void onShowBillAction(ActionEvent event) {
-
+        // window.close()
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Factura");
+        alert.setHeaderText(null);
+        alert.setContentText(SystemBeverage.generateInvoice());
+        alert.showAndWait();
     }
 
     @FXML

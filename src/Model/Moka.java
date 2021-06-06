@@ -4,7 +4,7 @@ public class Moka extends Beverage_Decorator{
     private float costo;
     public Moka(Beverage b_d) {
         super(b_d);
-        description="Caramel";
+        description="Moka";
         costo=300;
     }
 

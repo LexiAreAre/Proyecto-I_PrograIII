@@ -5,7 +5,7 @@ public class Soy extends Beverage_Decorator{
     private float costo;
     public Soy(Beverage b_d) {
         super(b_d);
-        description="Caramel";
+        description="Soy";
         costo=300;
 
     }

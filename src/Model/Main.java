@@ -29,6 +29,7 @@ public class Main extends Application {
         current = stage;
         current.setScene(scene);
         current.setResizable(false);
+        current.setTitle("Starbuzz Application");
         current.show();
     }
 }

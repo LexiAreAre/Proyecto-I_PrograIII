@@ -6,7 +6,7 @@ public class Milk_Foam extends Beverage_Decorator{
 
     public Milk_Foam(Beverage b_d) {
         super(b_d);
-        description="Caramel";
+        description="Milk Foam";
         costo=500;
 
     }
