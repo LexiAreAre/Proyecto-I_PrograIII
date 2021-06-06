@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="773.0" style="-fx-background-color: Orange;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToppingsWindowController">
+
+      <Button fx:id="caramelButton" layoutX="14.0" layoutY="112.0" mnemonicParsing="false" onAction="#onCaramelPressed" prefHeight="101.0" prefWidth="140.0" text="Caramel" />
+      <Button fx:id="mokaButton" layoutX="226.0" layoutY="112.0" mnemonicParsing="false" onAction="#onMokaPressed" prefHeight="101.0" prefWidth="140.0" text="Moka" />
+      <Button fx:id="soyButton" layoutX="422.0" layoutY="112.0" mnemonicParsing="false" onAction="#onSoyPressed" prefHeight="101.0" prefWidth="140.0" text="Soy" />
+      <Button fx:id="milkFoamButton" layoutX="619.0" layoutY="112.0" mnemonicParsing="false" onAction="#onMilkFoamPressed" prefHeight="101.0" prefWidth="140.0" text="Milk Foam" />
+      <Button fx:id="goBackButton" layoutX="226.0" layoutY="301.0" mnemonicParsing="false" onAction="#onGoBackAction" prefHeight="52.0" prefWidth="140.0" text="Regresar" />
+      <Button fx:id="showBillButton" layoutX="422.0" layoutY="301.0" mnemonicParsing="false" onAction="#onShowBillAction" prefHeight="52.0" prefWidth="140.0" text="Visualizar Factura" />
+
+</AnchorPane>

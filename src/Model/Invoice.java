@@ -1,20 +1,23 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class Invoice {
-    private float cost;
-    private String description;
+    ArrayList<Beverage> list;
 
-    public Invoice(float cost, String description){
-        this.cost = cost;
-        this.description = description;
+    public Invoice(ArrayList<Beverage> list){
+        this.list = list;
     }
 
-    public String getinvoiceDescription(){
-        return description;
+    public String printBill(){
+        StringBuilder bill = new StringBuilder();
+        bill.append("---------------------------");
+       for(Beverage i: this.list)
+       {
+           bill.append(i.getDescription());
+           bill.append(i.getCost());
+       }
+        bill.append("---------------------------");
+       return bill.toString();
     }
-
-    public String print(){
-        return "Cost: " + cost + "\n" + "Description of Invoice: " + description + "\n";
-    }
-
 }
