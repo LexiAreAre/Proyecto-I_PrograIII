@@ -1,11 +1,13 @@
 package Controller;
 
 
-import Model.Caramel;
-import Model.SystemBeverage;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class ToppingsWindowController {
     @FXML
@@ -35,17 +37,22 @@ public class ToppingsWindowController {
 
     @FXML
     void onGoBackAction(ActionEvent event) {
-
+        Stage stage = (Stage) goBackButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void onMilkFoamPressed(ActionEvent event) {
-
+        Milk_Foam beverageWithMilk_Foam = new Milk_Foam(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
+        SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
+        SystemBeverage.beverages.add(beverageWithMilk_Foam);
     }
 
     @FXML
     void onMokaPressed(ActionEvent event) {
-
+        Moka beverageWithMoka = new Moka(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
+        SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
+        SystemBeverage.beverages.add(beverageWithMoka);
     }
 
     @FXML
@@ -55,6 +62,8 @@ public class ToppingsWindowController {
 
     @FXML
     void onSoyPressed(ActionEvent event) {
-
+        Soy beverageWithSoy = new Soy(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
+        SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
+        SystemBeverage.beverages.add(beverageWithSoy);
     }
 }

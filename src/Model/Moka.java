@@ -1,9 +1,8 @@
 package Model;
-
 public class Moka extends Beverage_Decorator{
     private String description;
     private float costo;
-    Moka(Beverage b_d) {
+    public Moka(Beverage b_d) {
         super(b_d);
         description="Caramel";
         costo=300;

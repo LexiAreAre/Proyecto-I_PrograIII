@@ -3,7 +3,7 @@ package Model;
 public class Soy extends Beverage_Decorator{
     private String description;
     private float costo;
-    Soy(Beverage b_d) {
+    public Soy(Beverage b_d) {
         super(b_d);
         description="Caramel";
         costo=300;
