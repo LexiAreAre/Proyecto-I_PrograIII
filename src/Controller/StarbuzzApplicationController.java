@@ -32,6 +32,9 @@ public class StarbuzzApplicationController {
 
     @FXML
     void onLogin() {
+
+        // check users
+
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("../View/StarbuzzApplicationCoffee.fxml"));

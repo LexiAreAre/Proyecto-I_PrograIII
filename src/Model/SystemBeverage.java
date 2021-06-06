@@ -1,8 +1,11 @@
 package Model;
 
+import Controller.ToppingsWindowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -29,6 +32,8 @@ public class SystemBeverage {
         }
         // saving the beverage in the arraylist
         beverages.add(beverage);
+        //using the scroll pane view to show current selection and post topping selections
+
     }
 
     public static String generateInvoice(){

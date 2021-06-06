@@ -6,10 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.DialogPane;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
+import javafx.scene.control.TextArea;
 
-import java.util.ArrayList;
 
 public class ToppingsWindowController {
     @FXML
@@ -31,7 +31,23 @@ public class ToppingsWindowController {
     private Button showBillButton;
 
     @FXML
+    private ScrollPane orderSummary;
+
+    @FXML
+    private TextArea orderSummaryText;
+
+    private void updateOrderSummary(Beverage b, String topping){
+        if(orderSummaryText.getText().isEmpty()){
+            orderSummaryText.setText("Added " + topping + " to: " + b.getDescription());
+        }
+        else{
+            orderSummaryText.setText(orderSummaryText.getText() + "\nAdded " + topping + " to: " + b.getDescription());
+        }
+    }
+
+    @FXML
     void onCaramelPressed(ActionEvent event) {
+        updateOrderSummary(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1), "Caramel");
         Caramel beverageWithCaramel = new Caramel(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithCaramel);
@@ -45,6 +61,7 @@ public class ToppingsWindowController {
 
     @FXML
     void onMilkFoamPressed(ActionEvent event) {
+        updateOrderSummary(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1), "Milk Foam");
         Milk_Foam beverageWithMilk_Foam = new Milk_Foam(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithMilk_Foam);
@@ -52,6 +69,7 @@ public class ToppingsWindowController {
 
     @FXML
     void onMokaPressed(ActionEvent event) {
+        updateOrderSummary(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1), "Moka");
         Moka beverageWithMoka = new Moka(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithMoka);
@@ -69,6 +87,7 @@ public class ToppingsWindowController {
 
     @FXML
     void onSoyPressed(ActionEvent event) {
+        updateOrderSummary(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1), "Soy");
         Soy beverageWithSoy = new Soy(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithSoy);
