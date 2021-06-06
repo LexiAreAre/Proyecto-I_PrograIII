@@ -6,7 +6,7 @@ public class Expresso implements Beverage{
     String description;
     // __________________________________________________________________________________________________
 //Métodos-----------------------------------------------------------------------------------------------
-Expresso(){
+    public Expresso(){
     costo=1900;
     description="Expresso";
 

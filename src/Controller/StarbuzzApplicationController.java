@@ -39,7 +39,7 @@ public class StarbuzzApplicationController {
             Scene scene = new Scene(window);
             Main.current.hide();
             Main.current.setScene(scene);
-            Main.current.setResizable(true);
+            Main.current.setResizable(false);
             Main.current.show();
         }
         catch(Exception e){

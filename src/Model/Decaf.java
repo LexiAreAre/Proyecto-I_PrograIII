@@ -9,7 +9,7 @@ public class Decaf implements Beverage{
 //Métodos-----------------------------------------------------------------------------------------------
 
 
-    Decaf(){
+    public Decaf(){
 
         costo=2500;
         description="Descaf";

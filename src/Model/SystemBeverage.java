@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 public class SystemBeverage {
 
+    ArrayList<Beverage> beverages = new ArrayList<>();
+
+    public static void addTopings(Beverage beverage)
+    {
+        // desplegamos la ventana para anadir topings
+
+    }
 
     public String generateInvoice(ArrayList<Beverage> beverageList){
         StringBuilder bill = new StringBuilder();

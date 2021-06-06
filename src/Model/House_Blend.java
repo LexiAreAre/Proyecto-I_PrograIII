@@ -6,7 +6,7 @@ public class House_Blend implements Beverage{
     String description;
     // __________________________________________________________________________________________________
 //Métodos-----------------------------------------------------------------------------------------------
-    House_Blend() {
+    public House_Blend() {
         costo = 4000;
         description = "House_Blend";
     }
