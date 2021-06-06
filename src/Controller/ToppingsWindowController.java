@@ -1,6 +1,8 @@
 package Controller;
 
 
+import Model.Caramel;
+import Model.SystemBeverage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,7 +28,9 @@ public class ToppingsWindowController {
 
     @FXML
     void onCaramelPressed(ActionEvent event) {
-
+        Caramel beverageWithCaramel = new Caramel(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
+        SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
+        SystemBeverage.beverages.add(beverageWithCaramel);
     }
 
     @FXML

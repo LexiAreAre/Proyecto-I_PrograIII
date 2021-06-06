@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class SystemBeverage {
 
-    ArrayList<Beverage> beverages = new ArrayList<>();
+    public static ArrayList<Beverage> beverages = new ArrayList<>();
 
     public static void addTopings(Beverage beverage)
     {
@@ -27,16 +27,14 @@ public class SystemBeverage {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+        // saving the beverage in the arraylist
+        beverages.add(beverage);
     }
 
-    public String generateInvoice(){
+    public static String generateInvoice(){
         StringBuilder bill = new StringBuilder();
-       Invoice v = new Invoice(this.beverages);
+       Invoice v = new Invoice(beverages);
         return v.printBill();
-    }
-
-    public String printInvoice(){
-        return null;
     }
 
 }

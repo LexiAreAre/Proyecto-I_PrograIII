@@ -13,7 +13,7 @@ public class Milk_Foam extends Beverage_Decorator{
 
     @Override
     public String getDescription(){
-        return super.getDescription()+description;
+        return super.getDescription()+ '+' +description;
     }
 
     @Override

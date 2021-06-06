@@ -3,7 +3,7 @@ package Model;
 public class Caramel extends Beverage_Decorator{
     private String description;
     float costo;
-   Caramel(Beverage b_d) {
+   public Caramel(Beverage b_d) {
        super(b_d);
        description="Caramel";
        costo=300;
@@ -11,7 +11,7 @@ public class Caramel extends Beverage_Decorator{
 
     @Override
     public String getDescription(){
-        return super.getDescription()+description;
+        return super.getDescription()+ '+' + description;
     }
 
     @Override
