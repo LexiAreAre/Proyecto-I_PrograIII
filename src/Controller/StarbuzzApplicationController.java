@@ -36,8 +36,7 @@ public class StarbuzzApplicationController {
 
         // check users
         UsersReader read = new UsersReader();
-        boolean acepta = read.checkUsers(usernameField.getText(), passwordField.getText());
-        if (acepta ) {
+        if ( read.checkUsers(usernameField.getText(), passwordField.getText()) ) {
             try {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(Main.class.getResource("../View/StarbuzzApplicationCoffee.fxml"));
@@ -51,7 +50,7 @@ public class StarbuzzApplicationController {
                 System.out.println(e.getMessage());
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Operación incorrecta");
+            JOptionPane.showMessageDialog(null, "Por favor revice los campos de usuario y contrasenna");
         }
     }
 }

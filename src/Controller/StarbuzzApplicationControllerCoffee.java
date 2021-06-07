@@ -58,7 +58,9 @@ public class StarbuzzApplicationControllerCoffee {
         alert.setContentText(SystemBeverage.generateInvoice());
         alert.showAndWait();
         //saving the bill's information to a txt
-
+        BillWriter writer = new BillWriter();
+        writer.setInvoice(SystemBeverage.beverages);
+        writer.write();
         //cleaning the vector in order to get newer requests
         SystemBeverage.beverages.clear();
     }

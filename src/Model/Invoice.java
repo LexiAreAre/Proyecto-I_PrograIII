@@ -11,7 +11,7 @@ public class Invoice {
 
     public String printBill(){
         StringBuilder bill = new StringBuilder();
-        bill.append("---------------------------\n");
+        bill.append("\n---------------------------\n");
        for(Beverage i: this.list)
        {
            bill.append("Product: ");

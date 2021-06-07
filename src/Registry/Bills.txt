@@ -1,0 +1,8 @@
+
+---------------------------
+Product: Expresso+Moka+Soy+Moka
+Price: 2800.0
+Product: Dark_Roast+Soy+Moka
+Price: 3600.0
+---------------------------
+Total: 6400.0
