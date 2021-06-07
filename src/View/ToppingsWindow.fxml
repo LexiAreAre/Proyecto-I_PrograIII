@@ -6,19 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="455.0" prefWidth="826.0" styleClass="bodyBackground" stylesheets="@StarbuzzApplicationStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToppingsWindowController">
-   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="407.0" layoutX="36.0" layoutY="24.0" opacity="0.75" stroke="BLACK" strokeDashOffset="1000.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="INSIDE" strokeWidth="10.0" width="726.0" />
+<AnchorPane prefHeight="535.0" prefWidth="888.0" styleClass="bodyBackground" stylesheets="@StarbuzzApplicationStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToppingsWindowController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="487.0" layoutX="35.0" layoutY="33.0" opacity="0.75" stroke="BLACK" strokeDashOffset="1000.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="INSIDE" strokeWidth="10.0" width="819.0" />
 
-      <Button fx:id="caramelButton" layoutX="86.0" layoutY="113.0" mnemonicParsing="false" onAction="#onCaramelPressed" prefHeight="101.0" prefWidth="140.0" text="Caramel" />
-      <Button fx:id="mokaButton" layoutX="259.0" layoutY="113.0" mnemonicParsing="false" onAction="#onMokaPressed" prefHeight="101.0" prefWidth="140.0" text="Moka" />
-      <Button fx:id="soyButton" layoutX="433.0" layoutY="113.0" mnemonicParsing="false" onAction="#onSoyPressed" prefHeight="101.0" prefWidth="140.0" text="Soy" />
-      <Button fx:id="milkFoamButton" layoutX="600.0" layoutY="113.0" mnemonicParsing="false" onAction="#onMilkFoamPressed" prefHeight="101.0" prefWidth="140.0" text="Milk Foam" />
-      <Button fx:id="goBackButton" layoutX="433.0" layoutY="300.0" mnemonicParsing="false" onAction="#onGoBackAction" prefHeight="52.0" prefWidth="140.0" text="Regresar" />
-      <Button fx:id="showBillButton" layoutX="600.0" layoutY="300.0" mnemonicParsing="false" onAction="#onShowBillAction" prefHeight="52.0" prefWidth="140.0" text="Visualizar Factura" />
-   <ScrollPane fx:id="orderSummary" layoutX="118.0" layoutY="276.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0">
+      <Button fx:id="caramelButton" layoutX="64.0" layoutY="164.0" mnemonicParsing="false" onAction="#onCaramelPressed" prefHeight="127.0" prefWidth="181.0" styleClass="caramelButton" stylesheets="@CaramelButton.css" />
+      <Button fx:id="mokaButton" layoutX="254.0" layoutY="164.0" mnemonicParsing="false" onAction="#onMokaPressed" prefHeight="127.0" prefWidth="181.0" styleClass="mokaButton" stylesheets="@Moka.css" />
+      <Button fx:id="soyButton" layoutX="451.0" layoutY="164.0" mnemonicParsing="false" onAction="#onSoyPressed" prefHeight="127.0" prefWidth="181.0" styleClass="soyButton" stylesheets="@SoyButton.css" />
+      <Button fx:id="milkFoamButton" layoutX="643.0" layoutY="164.0" mnemonicParsing="false" onAction="#onMilkFoamPressed" prefHeight="127.0" prefWidth="181.0" styleClass="milkFoamButton" stylesheets="@Milk_FoamButton.css" />
+      <Button fx:id="goBackButton" layoutX="433.0" layoutY="362.0" mnemonicParsing="false" onAction="#onGoBackAction" prefHeight="52.0" prefWidth="140.0" text="Regresar" />
+      <Button fx:id="showBillButton" layoutX="600.0" layoutY="362.0" mnemonicParsing="false" onAction="#onShowBillAction" prefHeight="52.0" prefWidth="140.0" text="Visualizar Factura" />
+   <ScrollPane fx:id="orderSummary" layoutX="94.0" layoutY="338.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" />
 
-         <TextArea fx:id="orderSummaryText" prefHeight="98.0" prefWidth="248.0" />
-
-   </ScrollPane>
+      <TextArea fx:id="orderSummaryText" layoutX="95.0" layoutY="339.0" prefHeight="100.0" prefWidth="280.0" />
 
 </AnchorPane>
