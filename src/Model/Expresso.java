@@ -1,17 +1,13 @@
 package Model;
 
 public class Expresso implements Beverage{
-    //Atributos----------------------------------------------------------------------------------------
+
     float costo;
     String description;
-    // __________________________________________________________________________________________________
-//Métodos-----------------------------------------------------------------------------------------------
+
     public Expresso(){
     costo=1900;
     description="Expresso";
-
-
-
 }
     @Override
     public String getDescription() {
@@ -22,7 +18,4 @@ public class Expresso implements Beverage{
     public float getCost() {
         return costo;
     }
-
-//------------------------------------------------------------------------------------------------------
-
 }

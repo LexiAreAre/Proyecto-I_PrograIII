@@ -2,7 +2,7 @@ package Model;
 
 public interface Beverage {
 
-//Atributos---------------------------------------------------------------------------------------------
+//Atributtes---------------------------------------------------------------------------------------------
 
     public String getDescription();
     public float getCost();

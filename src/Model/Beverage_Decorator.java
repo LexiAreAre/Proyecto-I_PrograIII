@@ -17,8 +17,3 @@ public class Beverage_Decorator implements Beverage{
         return basic_decorator.getCost();
     }
 }
-
-
-
-//          Beverage bd = new BebeverageDecorator();
-//

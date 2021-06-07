@@ -1,5 +1,7 @@
 package Model;
 
+// this class will be used in a future to get better data savings while writing on external files or data bases
+
 public class User {
     private String username;
     private String password;
@@ -29,6 +31,4 @@ public class User {
         return "Username: " + username + "\n"
                 + "Password: " + password + "\n";
     }
-
-
 }

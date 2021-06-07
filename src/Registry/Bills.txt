@@ -6,3 +6,10 @@ Product: Dark_Roast+Soy+Moka
 Price: 3600.0
 ---------------------------
 Total: 6400.0
+---------------------------
+Product: Dark_Roast+Soy+Moka+Moka+Soy+Milk Foam
+Price: 4700.0
+Product: House_Blend+Moka+Soy
+Price: 4600.0
+---------------------------
+Total: 9300.0

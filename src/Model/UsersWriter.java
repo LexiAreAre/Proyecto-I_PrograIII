@@ -1,10 +1,13 @@
 package Model;
+
 import java.io.FileWriter;
 import java.io.IOException;
-import Model.User;
+
 public class UsersWriter implements JavaWriter{
+
     private User user;
     @Override
+
     public void write() {
            user=new User("admi2","123");
         try {

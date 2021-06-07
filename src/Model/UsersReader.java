@@ -1,17 +1,13 @@
 package Model;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-
 import java.io.FileReader;
 import java.io.IOException;
+
 public class UsersReader implements JavaReader {
 
     StringBuilder admi = new StringBuilder();
 
     @Override
-
     public void read() {
         try {
             FileReader reader = new FileReader("src/Registry/Users.txt");

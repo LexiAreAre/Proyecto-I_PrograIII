@@ -8,7 +8,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 
-    // current will be the only stage in all program's life
+    // current will be the main stage on the application for the login and the main menu
     public static Stage current = null;
 
     public static void main(String[] args){

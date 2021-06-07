@@ -1,17 +1,17 @@
 package Model;
 
-import Controller.ToppingsWindowController;
+// This class will be in charge of connecting the menu choises of the toppings and generating the respective invoice each time a new order is generated in the application...
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
 public class SystemBeverage {
 
+    //container for all beverages while creating an order, this will be cleaned once the print bill button is pressed.
     public static ArrayList<Beverage> beverages = new ArrayList<>();
 
     public static void addTopings(Beverage beverage)
@@ -19,6 +19,7 @@ public class SystemBeverage {
         // showing toppings window
         Stage stage = new Stage();
         try{
+            //Creating side window for toppings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("../View/ToppingsWindow.fxml"));
             AnchorPane window = loader.load();
@@ -32,8 +33,6 @@ public class SystemBeverage {
         }
         // saving the beverage in the arraylist
         beverages.add(beverage);
-        //using the scroll pane view to show current selection and post topping selections
-
     }
 
     public static String generateInvoice(){

@@ -1,6 +1,7 @@
 package Model;
 
 public class Milk_Foam extends Beverage_Decorator{
+
     private String description;
     private float costo;
 
@@ -8,7 +9,6 @@ public class Milk_Foam extends Beverage_Decorator{
         super(b_d);
         description="Milk Foam";
         costo=500;
-
     }
 
     @Override

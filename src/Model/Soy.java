@@ -1,13 +1,14 @@
 package Model;
 
 public class Soy extends Beverage_Decorator{
+
     private String description;
     private float costo;
+
     public Soy(Beverage b_d) {
         super(b_d);
         description="Soy";
         costo=300;
-
     }
 
     @Override
