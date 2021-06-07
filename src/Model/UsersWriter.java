@@ -6,6 +6,7 @@ public class UsersWriter implements JavaWriter{
     private User user;
     @Override
     public void write() {
+           user=new User("admi2","123");
         try {
             FileWriter writer = new FileWriter("Users.txt", true);
             writer.write(user.getUsername());
