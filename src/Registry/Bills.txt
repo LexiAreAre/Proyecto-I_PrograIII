@@ -25,3 +25,27 @@ Product: Descaf+Milk Foam+Soy+Moka+Caramel
 Price: 3900.0
 ---------------------------
 Total: 3900.0
+---------------------------
+Product: Expresso+Moka
+Price: 2200.0
+---------------------------
+Total: 2200.0
+---------------------------
+Product: Expresso+Soy
+Price: 2200.0
+---------------------------
+Total: 2200.0
+---------------------------
+Product: Dark_Roast+Soy+Moka
+Price: 3600.0
+---------------------------
+Total: 3600.0
+---------------------------
+Product: Expresso
+Price: 1900.0
+Product: House_Blend
+Price: 4000.0
+Product: Dark_Roast+Soy+Moka+Caramel+Caramel+Soy+Milk Foam+Milk Foam+Moka+Caramel+Milk Foam+Milk Foam+Moka+Caramel+Caramel+Moka+Soy+Milk Foam+Milk Foam+Milk Foam+Soy+Moka+Caramel+Caramel+Caramel+Moka+Soy+Soy+Milk Foam
+Price: 13000.0
+---------------------------
+Total: 18900.0
