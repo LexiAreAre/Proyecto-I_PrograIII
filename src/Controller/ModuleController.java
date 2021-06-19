@@ -9,7 +9,7 @@ import javafx.scene.control.TableView;
 public class ModuleController{
     @FXML
     private TableView<Beverage> view;
-
+//gg
     @FXML
     private TableColumn<Invoice, Invoice> invoice;
 
