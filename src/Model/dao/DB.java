@@ -15,10 +15,7 @@ public class DB {
             return conn;
         }catch(Exception ex){
             System.out.println(" ");
-            return null;
         }
-
+        return null;
     }
-
-
 }
