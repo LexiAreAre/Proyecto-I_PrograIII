@@ -1,21 +1,55 @@
 package Model.dao;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+
 public class DB {
+    static final String Driver = "com.mysql.jdbc.Driver";
+    static final String url = "jdbc:mysql://localhost:3306/DATABASE";
+    static final String username = "root";
+    static final String password = "Contra";
+
     public static Connection getConnection(){
+        Connection conn = null;
+        Statement st = null;
+
         try{
-            String driver = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/database";
-            String username = "Admin";
-            String password = "Contra";
-            Class.forName(driver);
-            Connection conn = DriverManager.getConnection(url,username,password);
+            Class.forName(Driver);
+            conn = DriverManager.getConnection(url,username,password);
             System.out.println(" ");
+            st = conn.createStatement();
+            String sql = "CREATE TABLE DATABASE" +
+                         "(id INTEGER not null," +
+                         "first VARCHAR(255)," +
+                         "last VARCHAR(255)," +
+                         "age INTEGER, "+
+                         "PRIMARY KEY(id))";
+            st.executeUpdate(sql);
             return conn;
-        }catch(Exception ex){
-            System.out.println(" ");
+        } catch(Exception ex){
+            ex.printStackTrace();
+        } finally{
+            try{
+                if(st!=null)
+                    conn.close();
+            }catch(SQLException e){
+                e.printStackTrace();
+            }
+        }
+        try{
+            if(conn!=null)
+                conn.close();
+        }catch(SQLException e){
+            e.printStackTrace();
         }
         return null;
     }
+/*
+    public static void createTable()throws Exception{
+        try{
+            Connection connection = getConnection();
+            PreparedStatement create = connection.prepareStatement("CREATE TABLE IF NOT EXISTS databaseProject(id int NOT NULL AUTO_INCREMENT,first varchar(255), last (255), PRIMARY KEY(id))");
+            create.executeUpdate();
+        }catch(Exception ex){System.out.println(ex);}
+        finally{System.out.print("Ready");}
+    }*/
+
 }
