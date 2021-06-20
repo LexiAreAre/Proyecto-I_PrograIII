@@ -49,3 +49,8 @@ Product: Dark_Roast+Soy+Moka+Caramel+Caramel+Soy+Milk Foam+Milk Foam+Moka+Carame
 Price: 13000.0
 ---------------------------
 Total: 18900.0
+---------------------------
+Product: Expresso
+Price: 1900.0
+---------------------------
+Total: 1900.0
