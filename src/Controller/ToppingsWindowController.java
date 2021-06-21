@@ -51,6 +51,7 @@ public class ToppingsWindowController {
         Caramel beverageWithCaramel = new Caramel(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithCaramel);
+        caramelButton.setDisable(true);
     }
 
     @FXML
@@ -65,6 +66,7 @@ public class ToppingsWindowController {
         Milk_Foam beverageWithMilk_Foam = new Milk_Foam(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithMilk_Foam);
+        milkFoamButton.setDisable(true);
     }
 
     @FXML
@@ -73,6 +75,7 @@ public class ToppingsWindowController {
         Moka beverageWithMoka = new Moka(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithMoka);
+        mokaButton.setDisable(true);
     }
 
     @FXML
@@ -91,5 +94,6 @@ public class ToppingsWindowController {
         Soy beverageWithSoy = new Soy(SystemBeverage.beverages.get(SystemBeverage.beverages.size()-1));
         SystemBeverage.beverages.remove(SystemBeverage.beverages.size()-1);
         SystemBeverage.beverages.add(beverageWithSoy);
+        soyButton.setDisable(true);
     }
 }

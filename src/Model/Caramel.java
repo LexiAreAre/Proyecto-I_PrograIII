@@ -1,22 +1,32 @@
 package Model;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class Caramel extends Beverage_Decorator{
-    private String description;
-    float costo;
+
+    private SimpleStringProperty description;
+    private final float cost;
+
    public Caramel(Beverage b_d) {
        super(b_d);
-       description="Caramel";
-       costo=300;
+       description=new SimpleStringProperty("Caramel");
+       cost =300;
+       if (this.toppings.isEmpty()){
+           this.toppings.append("Caramel");
+       }
+       else{
+           this.toppings.append("'\nCaramel");
+       }
     }
 
     @Override
     public String getDescription(){
-        return super.getDescription()+ '+' + description;
+        return super.getDescription()+ '\n' + "     " +description.get();
     }
 
     @Override
     public float getCost() {
-        return super.getCost()+costo;
+        return super.getCost()+ cost;
     }
 
 }

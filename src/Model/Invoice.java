@@ -15,7 +15,7 @@ public class Invoice {
         bill.append("\n---------------------------\n");
        for(Beverage i: this.list)
        {
-           bill.append("Product: ");
+           bill.append("Product: \n");
            bill.append(i.getDescription());
            bill.append('\n');
            bill.append("Price: ");

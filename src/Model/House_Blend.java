@@ -1,22 +1,33 @@
 package Model;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class House_Blend implements Beverage{
 
-    float costo;
-    String description;
-
+    float cost;
+    SimpleStringProperty description;
+    SimpleStringProperty baseName = new SimpleStringProperty("House Blend");
     public House_Blend() {
-        costo = 4000;
-        description = "House_Blend";
+        cost = 4000;
+        description = new SimpleStringProperty("House_Blend");
     }
 
     @Override
     public String getDescription() {
-        return description;
+        return description.get();
     }
 
     @Override
     public float getCost() {
-        return costo;
+        return cost;
+    }
+
+    @Override
+    public String getBaseName() {
+        return baseName.get();
+    }
+    @Override
+    public String getToppings() {
+        return this.getToppings();
     }
 }

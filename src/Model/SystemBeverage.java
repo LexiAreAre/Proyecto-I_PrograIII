@@ -14,7 +14,7 @@ public class SystemBeverage {
     //container for all beverages while creating an order, this will be cleaned once the print bill button is pressed.
     public static ArrayList<Beverage> beverages = new ArrayList<>();
 
-    public static void addTopings(Beverage beverage)
+    public static String addTopings()
     {
         // showing toppings window
         Stage stage = new Stage();
@@ -26,13 +26,12 @@ public class SystemBeverage {
             Scene scene = new Scene(window);
             stage.setScene(scene);
             stage.setResizable(false);
-            stage.show();
+            stage.showAndWait();
         }
-        catch(Exception e){
+        catch(Exception e) {
             System.out.println(e.getMessage());
         }
-        // saving the beverage in the arraylist
-        beverages.add(beverage);
+        return getBeveragesDescription();
     }
 
     public static String generateInvoice(){
@@ -41,4 +40,17 @@ public class SystemBeverage {
         return v.printBill();
     }
 
+    public static String getBeveragesDescription()
+    {
+        StringBuilder desc = new StringBuilder();
+        int i = 0;
+        for (Beverage x: beverages
+             ) {
+            desc.append('\n' + x.getDescription() + "\n" + x.getCost());
+            i += x.getCost();
+        }
+        desc.append("\nTotal:\t" + i);
+        desc.append('\n' + "---   fin de linea   ---");
+        return desc.toString();
+    }
 }
