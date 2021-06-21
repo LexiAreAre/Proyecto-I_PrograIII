@@ -1,11 +1,14 @@
 package Model;
 
+import Model.dao.UserDAO;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+
+import java.sql.ResultSet;
 
 public class Main extends Application {
 
@@ -23,6 +26,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        UserDAO dao = new UserDAO();
+        ResultSet resultSet = dao.read();
+        if(resultSet!=null){
+         while(resultSet.next()){
+             System.out.println(resultSet.getString("username"));
+         }
+        }
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("../View/StarbuzzApplication.fxml"));
         AnchorPane window = loader.load();
