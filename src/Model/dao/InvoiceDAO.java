@@ -2,15 +2,26 @@ package Model.dao;
 
 import Model.Invoice;
 
-public class InvoiceDAO extends DB implements InvoiceDAO_Interface{
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class InvoiceDAO implements InvoiceDAO_Interface{
+    private DB db = new DB();
+
     @Override
     public boolean create(Invoice i) {
         return false;
     }
 
     @Override
-    public boolean read(Invoice i) {
-        return false;
+    public ResultSet read() {
+        try{
+            Statement statement = db.getConnection().createStatement();
+            String query = "SELECT * FROM invoices";
+            return statement.executeQuery(query);
+        }catch(Exception exception){
+            return null;
+        }
     }
 
     @Override

@@ -13,11 +13,11 @@ import java.sql.SQLException;
 import java.util.Properties;
 public class DB /*extends MysqlDataSource*/ {
     static final String Driver = "com.mysql.jdbc.Driver";
-    static final String url = "jdbc:mysql://localhost:3306/mysql";
+    static final String url = "jdbc:mysql://localhost:3306/crud";
     static final String username = "root";
-    static final String password = "Contra";
+    static final String password = "";
 
-/*
+
     private static DB theInstance;
     public static final String PROPERTIES_FILE_NAME="/db.properties";
     private Connection cnx;
@@ -36,30 +36,14 @@ public class DB /*extends MysqlDataSource*/ {
 
     public Connection getConnection() {
         try {
-            Properties prop = new Properties();
-            URL resourceUrl = getClass().getResource(PROPERTIES_FILE_NAME);
-            File file = new File(resourceUrl.toURI());
-            prop.load(new BufferedInputStream(new FileInputStream(file)));
-            String driver = prop.getProperty("database_driver");
-            String server = prop.getProperty("database_server");
-            String port = prop.getProperty("database_port");
-            String user = prop.getProperty("database_user");
-            String password = prop.getProperty("database_password");
-            String database = prop.getProperty("database_name");
-            String ssl= prop.getProperty("ssl");
-            String URL_conexion="jdbc:mysql://"+ server+":"+port+"/"+
-                    database+"&user="+user+"&password="+password+"&serverTimezone=UTC";
-            Class.forName(driver).newInstance();
-
-            System.out.println("Database: Database inicializada");
-            return DriverManager.getConnection(URL_conexion);
+            return DriverManager.getConnection(url,username,password);
         } catch (Exception e) {
             System.err.println(e.getMessage());
             System.exit(-1);
+            return null;
         }
-        return null;
     }
-
+/*
     public PreparedStatement prepareStatement(String statement) throws SQLException {
 
         return cnx.prepareStatement(statement);
@@ -87,41 +71,7 @@ public class DB /*extends MysqlDataSource*/ {
 
 
 
-    public static Connection getConnection(){
-        Connection conn = null;
-        Statement st = null;
 
-        try{
-            Class.forName(Driver);
-            conn = DriverManager.getConnection(url,username,password);
-            System.out.println(" ");
-            st = conn.createStatement();
-            String sql = "CREATE TABLE DATABASE" +
-                         "(id INTEGER not null," +
-                         "first VARCHAR(255)," +
-                         "last VARCHAR(255)," +
-                         "age INTEGER, "+
-                         "PRIMARY KEY(id))";
-            st.executeUpdate(sql);
-            return conn;
-        } catch(Exception ex){
-            ex.printStackTrace();
-        } finally{
-            try{
-                if(st!=null)
-                    conn.close();
-            }catch(SQLException e){
-                e.printStackTrace();
-            }
-        }
-        try{
-            if(conn!=null)
-                conn.close();
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        return null;
-    }
 /*
     public static void createTable()throws Exception{
         try{
