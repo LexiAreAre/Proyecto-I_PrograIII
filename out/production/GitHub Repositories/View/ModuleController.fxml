@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="595.0" prefWidth="1052.0" styleClass="bodyBackground" stylesheets="@StarbuzzApplicationStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModuleController">
+<AnchorPane prefHeight="595.0" prefWidth="1052.0" styleClass="bodyBackground" stylesheets="@StarbuzzApplicationStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModuleController">
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="577.0" layoutX="17.0" layoutY="9.0" opacity="0.75" stroke="BLACK" strokeDashOffset="1000.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="INSIDE" strokeWidth="10.0" width="1019.0" />
       <TableView fx:id="view" layoutX="61.0" layoutY="75.0" prefHeight="481.0" prefWidth="422.0">
         <columns>
-          <TableColumn fx:id="invoiceColumn" prefWidth="84.0" text="#Beverage" />
-          <TableColumn fx:id="beverageColumn" prefWidth="114.0" text="Topping" />
-            <TableColumn fx:id="toppingColumn" prefWidth="111.0" text="Price" />
-            <TableColumn fx:id="priceColumn" prefWidth="112.0" text="Delete" />
+          <TableColumn fx:id="nameColumn" prefWidth="84.0" text="Beverage" />
+          <TableColumn fx:id="toppingsColumn" prefWidth="114.0" text="Topping" />
+            <TableColumn fx:id="priceColumn" prefWidth="111.0" text="Price" />
+            <TableColumn fx:id="deleteColumn" prefWidth="112.0" text="Delete" />
         </columns>
       </TableView>
   <Text fontSmoothingType="LCD" layoutX="674.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de facturas procesadas">
@@ -22,10 +22,10 @@
       <Font size="18.0" />
     </font>
   </Text>
-  <TableView layoutX="566.0" layoutY="75.0" prefHeight="481.0" prefWidth="422.0">
+  <TableView fx:id="previousBillsSummary" layoutX="566.0" layoutY="75.0" prefHeight="481.0" prefWidth="422.0">
     <columns>
-      <TableColumn prefWidth="285.0" text="# Factura" />
-      <TableColumn prefWidth="136.0" text="Ver" />
+      <TableColumn fx:id="previousBillNumberColumn" prefWidth="285.0" text="# Factura" />
+      <TableColumn fx:id="showPreviousBillColumn" prefWidth="136.0" text="Ver" />
     </columns>
   </TableView>
   <Text fontSmoothingType="LCD" layoutX="234.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Factura Actual">
