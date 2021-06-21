@@ -17,6 +17,6 @@
       <Button fx:id="showBillButton" layoutX="600.0" layoutY="362.0" mnemonicParsing="false" onAction="#onShowBillAction" prefHeight="52.0" prefWidth="140.0" text="Visualizar Factura" />
    <ScrollPane fx:id="orderSummary" layoutX="94.0" layoutY="338.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" />
 
-      <TextArea fx:id="orderSummaryText" layoutX="95.0" layoutY="339.0" prefHeight="100.0" prefWidth="280.0" />
+      <TextArea fx:id="orderSummaryText" editable="false" layoutX="95.0" layoutY="339.0" prefHeight="100.0" prefWidth="280.0" />
 
 </AnchorPane>

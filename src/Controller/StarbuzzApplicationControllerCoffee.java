@@ -3,9 +3,13 @@ package Controller;
 import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class StarbuzzApplicationControllerCoffee {
     @FXML
@@ -30,23 +34,38 @@ public class StarbuzzApplicationControllerCoffee {
     private Button houseBlendButton;
 
     @FXML
+    private TextArea billOverview;
+
+    @FXML
+    private Button editBillButton;
+
+    @FXML
     void onDarkRoastSelection(ActionEvent event) {
-        Model.SystemBeverage.addTopings(new Dark_Roast());
+        // saving the beverage in the arraylist
+        SystemBeverage.beverages.add(new Dark_Roast());
+        billOverview.setText(SystemBeverage.getBeveragesDescription());
+        billOverview.setText(Model.SystemBeverage.addTopings());
     }
 
     @FXML
     void onDecafSelection(ActionEvent event) {
-        Model.SystemBeverage.addTopings(new Decaf());
+        SystemBeverage.beverages.add(new Decaf());
+        billOverview.setText(SystemBeverage.getBeveragesDescription());
+        billOverview.setText(Model.SystemBeverage.addTopings());
     }
 
     @FXML
     void onEspressoSelection(ActionEvent event) {
-        Model.SystemBeverage.addTopings(new Expresso());
+        SystemBeverage.beverages.add(new Expresso());
+        billOverview.setText(SystemBeverage.getBeveragesDescription());
+        billOverview.setText(Model.SystemBeverage.addTopings());
     }
 
     @FXML
     void onHouseBlendSelection(ActionEvent event) {
-        Model.SystemBeverage.addTopings(new House_Blend());
+        SystemBeverage.beverages.add(new House_Blend());
+        billOverview.setText(SystemBeverage.getBeveragesDescription());
+        billOverview.setText(Model.SystemBeverage.addTopings());
     }
 
     @FXML
@@ -66,5 +85,23 @@ public class StarbuzzApplicationControllerCoffee {
     }
     @FXML
     void onExitMain(ActionEvent event) { System.exit(0);}
+
+    @FXML
+    void onEditBill(ActionEvent event) {
+        try{
+            Stage stage = new Stage();
+            //Creating side window for toppings
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("../View/ModuleController.fxml"));
+            AnchorPane window = loader.load();
+            Scene scene = new Scene(window);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
 }

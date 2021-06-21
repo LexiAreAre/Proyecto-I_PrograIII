@@ -1,24 +1,36 @@
 package Model;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class Decaf implements Beverage{
 
-    float costo;
-    String description;
-
+    float cost;
+    SimpleStringProperty description;
+    SimpleStringProperty baseName = new SimpleStringProperty("Decaf");
     public Decaf(){
 
-        costo=2500;
-        description="Descaf";
+        cost =2500;
+        description=new SimpleStringProperty("Descaf");
 
 
     }
+
     @Override
     public String getDescription() {
-        return description;
+        return description.get();
     }
 
     @Override
     public float getCost() {
-        return costo;
+        return cost;
+    }
+
+    @Override
+    public String getBaseName() {
+        return baseName.get();
+    }
+    @Override
+    public String getToppings() {
+        return this.getToppings();
     }
 }
