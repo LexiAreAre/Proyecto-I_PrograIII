@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
-public class DB /*extends MysqlDataSource*/ {
+public class DB extends MysqlDataSource {
     static final String Driver = "com.mysql.jdbc.Driver";
     static final String url = "jdbc:mysql://localhost:3306/crud";
     static final String username = "root";
