@@ -1,8 +1,7 @@
 package Model.dao;
 import Model.User;
 
-import java.sql.*;
-public class UserDAO implements UserDAO_Interface{
+public class UserDAO extends DB implements UserDAO_Interface{
 
 
     @Override

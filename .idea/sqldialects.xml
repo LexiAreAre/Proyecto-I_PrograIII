@@ -2,5 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/Model/dao/DB.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/Model/dao/db_starbuzz.mwb.bak" dialect="OracleSqlPlus" />
+    <file url="file://$PROJECT_DIR$/src/Model/dao/scrip_base.sql" dialect="MySQL" />
   </component>
 </project>

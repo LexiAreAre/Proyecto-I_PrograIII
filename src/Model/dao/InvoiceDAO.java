@@ -2,7 +2,7 @@ package Model.dao;
 
 import Model.Invoice;
 
-public class InvoiceDAO implements InvoiceDAO_Interface{
+public class InvoiceDAO extends DB implements InvoiceDAO_Interface{
     @Override
     public boolean create(Invoice i) {
         return false;
