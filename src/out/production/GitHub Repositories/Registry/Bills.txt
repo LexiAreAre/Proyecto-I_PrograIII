@@ -54,3 +54,52 @@ Product: Expresso
 Price: 1900.0
 ---------------------------
 Total: 1900.0
+---------------------------
+Product: 
+Descaf
+     Moka
+Price: 2800.0
+Product: 
+Descaf
+     Soy
+     Moka
+     Caramel
+     Milk Foam
+Price: 3900.0
+Product: 
+House_Blend
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 5400.0
+Product: 
+Descaf
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 3900.0
+Product: 
+House_Blend
+     Milk Foam
+     Soy
+     Moka
+     Caramel
+Price: 5400.0
+Product: 
+House_Blend
+     Milk Foam
+     Soy
+     Moka
+Price: 5100.0
+---------------------------
+Total: 26500.0
+---------------------------
+Product: 
+House_Blend
+     Moka
+     Soy
+Price: 4600.0
+---------------------------
+Total: 4600.0
