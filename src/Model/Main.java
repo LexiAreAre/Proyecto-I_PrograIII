@@ -26,13 +26,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        UserDAO dao = new UserDAO();
-        ResultSet resultSet = dao.read();
-        if(resultSet!=null){
-         while(resultSet.next()){
-             System.out.println(resultSet.getString("username"));
-         }
-        }
+//        UserDAO dao = new UserDAO();
+//        ResultSet resultSet = dao.read();
+//        if(resultSet!=null){
+//         while(resultSet.next()){
+//             System.out.println(resultSet.getString("username"));
+//         }
+//        }
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("../View/StarbuzzApplication.fxml"));
         AnchorPane window = loader.load();

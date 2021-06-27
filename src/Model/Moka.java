@@ -6,7 +6,6 @@ public class Moka extends Beverage_Decorator{
 
     private SimpleStringProperty description;
     private final float cost;
-
     public Moka(Beverage b_d) {
         super(b_d);
         description=new SimpleStringProperty("Moka");
@@ -29,3 +28,4 @@ public class Moka extends Beverage_Decorator{
         return super.getCost()+ cost;
     }
 }
+

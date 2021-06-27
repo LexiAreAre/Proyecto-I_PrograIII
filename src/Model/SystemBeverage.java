@@ -53,4 +53,21 @@ public class SystemBeverage {
         desc.append('\n' + "---   fin de linea   ---");
         return desc.toString();
     }
+
+    public static String editBilling(){
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("../View/ModuleController.fxml"));
+            AnchorPane window = loader.load();
+            Scene scene = new Scene(window);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.showAndWait();
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return getBeveragesDescription();
+    }
 }

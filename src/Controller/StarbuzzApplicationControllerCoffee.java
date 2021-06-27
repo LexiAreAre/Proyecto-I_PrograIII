@@ -36,6 +36,7 @@ public class StarbuzzApplicationControllerCoffee {
     @FXML
     private TextArea billOverview;
 
+
     @FXML
     private Button editBillButton;
 
@@ -88,20 +89,8 @@ public class StarbuzzApplicationControllerCoffee {
 
     @FXML
     void onEditBill(ActionEvent event) {
-        try{
-            Stage stage = new Stage();
-            //Creating side window for toppings
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("../View/ModuleController.fxml"));
-            AnchorPane window = loader.load();
-            Scene scene = new Scene(window);
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
-        }
-        catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
+        billOverview.setText(SystemBeverage.editBilling());
+        billOverview.setText(SystemBeverage.getBeveragesDescription());
     }
 
 }
