@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Invoice {
     public ArrayList<Beverage> list;
@@ -17,6 +18,8 @@ public class Invoice {
     public int getId(){
         return id;
     }
+
+    public static List<InvoiceModel> pastInvoices;
 
     public Invoice(ArrayList<Beverage> list){
         this.list = list;

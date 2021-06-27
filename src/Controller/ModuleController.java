@@ -2,6 +2,7 @@ package Controller;
 
 import Model.BeverageModel;
 import Model.SystemBeverage;
+import Model.dao.InvoiceDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +15,7 @@ import java.util.*;
 public class ModuleController implements Initializable {
 
     List<BeverageModel> list = new ArrayList<>();
-
+    List<String> list2 = new ArrayList<>();
 
     @FXML
     private TableView<BeverageModel> view;
@@ -29,7 +30,7 @@ public class ModuleController implements Initializable {
     private TableColumn<BeverageModel, String> priceColumn;
 
     @FXML
-    private TableView<?> previousBillsSummary;
+    private TextArea previousBillsOverview;
 
     @FXML
     private Button deleteRowButton;
@@ -64,6 +65,9 @@ public class ModuleController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        InvoiceDAO indao = new InvoiceDAO();
+        previousBillsOverview.setText(indao.read().toString());
 
         for (int i = 0; i < SystemBeverage.beverages.size(); i ++){
             list.add(new BeverageModel(SystemBeverage.beverages.get(i)));
