@@ -11,7 +11,21 @@ public class UserDAO implements UserDAO_Interface{
 
     @Override
     public boolean create(User u) {
-        return false;
+        boolean resul = false;
+        try{
+            Connection conn = DB.conect();
+            String query = "insert into mydb.user(id, username, password) values (?,?,?)";
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1,"0");
+            preparedStatement.setString(2,u.getUsername());
+            preparedStatement.setString(3,u.getPassword());
+            resul=preparedStatement.execute();
+
+        }catch(Exception ex){
+            System.err.println("Got an exception! ");
+            System.err.println(ex.getMessage());
+        }
+        return resul;
     }
 
     @Override
@@ -29,7 +43,8 @@ public class UserDAO implements UserDAO_Interface{
     @Override
     public boolean update(User u) throws SQLException{
         boolean updated;
-        try(Connection connection = db.getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE)){
+        try(Connection connection = db.getConnection();
+            PreparedStatement statement = connection.prepareStatement(UPDATE)){
             statement.setString(1, u.getUsername());
             statement.setString(2, u.getPassword());
             updated = statement.executeUpdate() > 0;
@@ -38,7 +53,25 @@ public class UserDAO implements UserDAO_Interface{
     }
 
     @Override
-    public boolean delete(User u) {
-        return false;
+    public void delete(User u) {
+
     }
+
+    public static void consulta(Connection conn) {
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs;
+            rs = stmt.executeQuery("SELECT * FROM mydb.users;");
+            while (rs.next()) {
+                String name = rs.getString("username");
+                System.out.println(name);
+            }
+
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+    }
+
+
 }

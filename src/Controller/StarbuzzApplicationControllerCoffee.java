@@ -1,15 +1,13 @@
 package Controller;
 
 import Model.*;
+import Model.dao.InvoiceDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 public class StarbuzzApplicationControllerCoffee {
     @FXML
@@ -36,9 +34,12 @@ public class StarbuzzApplicationControllerCoffee {
     @FXML
     private TextArea billOverview;
 
-
     @FXML
     private Button editBillButton;
+    private InvoiceDAO dao = new InvoiceDAO();
+    Beverage bev;
+
+    private Invoice invoice = new Invoice(SystemBeverage.beverages);
 
     @FXML
     void onDarkRoastSelection(ActionEvent event) {
@@ -72,6 +73,8 @@ public class StarbuzzApplicationControllerCoffee {
     @FXML
     void onPrintBillAction(ActionEvent event) {
         //showing all requested beverages bill
+
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Factura");
         alert.setHeaderText(null);
@@ -81,6 +84,8 @@ public class StarbuzzApplicationControllerCoffee {
         BillWriter writer = new BillWriter();
         writer.setInvoice(SystemBeverage.beverages);
         writer.write();
+        //DAO
+        dao.create(invoice);
         //cleaning the vector in order to get newer requests
         SystemBeverage.beverages.clear();
     }

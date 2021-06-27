@@ -1,12 +1,9 @@
 package Model;
-
 // This class will be in charge of connecting the menu choises of the toppings and generating the respective invoice each time a new order is generated in the application...
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 
 public class SystemBeverage {

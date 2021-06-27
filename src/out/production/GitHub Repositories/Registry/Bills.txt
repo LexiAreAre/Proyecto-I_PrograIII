@@ -103,3 +103,316 @@ House_Blend
 Price: 4600.0
 ---------------------------
 Total: 4600.0
+---------------------------
+Product: 
+Dark_Roast
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 4400.0
+Product: 
+House_Blend
+     Milk Foam
+     Soy
+     Moka
+     Caramel
+Price: 5400.0
+Product: 
+Descaf
+     Milk Foam
+     Soy
+     Moka
+     Caramel
+Price: 3900.0
+Product: 
+Dark_Roast
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 4400.0
+---------------------------
+Total: 18100.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Expresso
+     Soy
+     Milk Foam
+Price: 2700.0
+---------------------------
+Total: 2700.0
+---------------------------
+Product: 
+Expresso
+     Moka
+     Caramel
+Price: 2500.0
+---------------------------
+Total: 2500.0
+---------------------------
+Product: 
+House_Blend
+     Moka
+     Soy
+Price: 4600.0
+---------------------------
+Total: 4600.0
+---------------------------
+Product: 
+Expresso
+     Moka
+     Soy
+Price: 2500.0
+---------------------------
+Total: 2500.0
+---------------------------
+Product: 
+Dark_Roast
+     Soy
+     Milk Foam
+Price: 3800.0
+---------------------------
+Total: 3800.0
+---------------------------
+---------------------------
+Total: 0.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Soy
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Expresso
+     Moka
+Price: 2200.0
+---------------------------
+Total: 2200.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Soy
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Milk Foam
+Price: 3500.0
+---------------------------
+Total: 3500.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+House_Blend
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 5400.0
+Product: 
+Expresso
+     Moka
+     Soy
+     Milk Foam
+Price: 3000.0
+Product: 
+House_Blend
+     Caramel
+     Moka
+     Soy
+Price: 4900.0
+Product: 
+Expresso
+     Milk Foam
+Price: 2400.0
+Product: 
+Dark_Roast
+Price: 3000.0
+---------------------------
+Total: 18700.0
+---------------------------
+Product: 
+Descaf
+     Soy
+     Moka
+Price: 3100.0
+---------------------------
+Total: 3100.0
+---------------------------
+Product: 
+Expresso
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 3300.0
+---------------------------
+Total: 3300.0
+---------------------------
+Product: 
+Dark_Roast
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 4400.0
+Product: 
+Expresso
+     Caramel
+     Moka
+     Soy
+     Milk Foam
+Price: 3300.0
+---------------------------
+Total: 7700.0
+---------------------------
+Product: 
+House_Blend
+     Caramel
+     Moka
+Price: 4600.0
+Product: 
+Descaf
+     Milk Foam
+Price: 3000.0
+---------------------------
+Total: 7600.0
+---------------------------
+Product: 
+House_Blend
+     Moka
+     Caramel
+Price: 4600.0
+Product: 
+Dark_Roast
+     Milk Foam
+     Soy
+Price: 3800.0
+---------------------------
+Total: 8400.0
+---------------------------
+Product: 
+Expresso
+     Milk Foam
+     Soy
+Price: 2700.0
+Product: 
+Expresso
+     Caramel
+     Moka
+Price: 2500.0
+---------------------------
+Total: 5200.0
+---------------------------
+Product: 
+Dark_Roast
+     Soy
+Price: 3300.0
+Product: 
+Expresso
+     Milk Foam
+Price: 2400.0
+---------------------------
+Total: 5700.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+Product: 
+Expresso
+     Milk Foam
+Price: 2400.0
+---------------------------
+Total: 5700.0
+---------------------------
+Product: 
+Expresso
+     Soy
+     Moka
+Price: 2500.0
+Product: 
+Dark_Roast
+     Milk Foam
+Price: 3500.0
+---------------------------
+Total: 6000.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+Product: 
+Descaf
+     Milk Foam
+Price: 3000.0
+Product: 
+Expresso
+     Soy
+Price: 2200.0
+Product: 
+House_Blend
+     Soy
+Price: 4300.0
+---------------------------
+Total: 12800.0
+---------------------------
+Product: 
+Dark_Roast
+     Moka
+Price: 3300.0
+---------------------------
+Total: 3300.0

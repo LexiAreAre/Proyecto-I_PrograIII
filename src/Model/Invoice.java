@@ -3,8 +3,20 @@ package Model;
 import java.util.ArrayList;
 
 public class Invoice {
+    public ArrayList<Beverage> list;
+    private int id;
 
-    ArrayList<Beverage> list;
+    public float sumTotal(){
+        float sum = 0;
+        for (Beverage i:list) {
+            sum += i.getCost();
+        }
+        return sum;
+    }
+
+    public int getId(){
+        return id;
+    }
 
     public Invoice(ArrayList<Beverage> list){
         this.list = list;

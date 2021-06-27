@@ -1,6 +1,4 @@
 package Controller;
-
-
 import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 import javafx.scene.control.TextArea;
-
 
 public class ToppingsWindowController {
     @FXML

@@ -1,10 +1,8 @@
 package Model;
 
-import javafx.beans.property.SimpleStringProperty;
-
 public class Beverage_Decorator implements Beverage{
 
-    protected StringBuilder toppings = new StringBuilder("");
+    protected StringBuilder toppings = new StringBuilder();
     private Beverage basic_decorator;
 
 

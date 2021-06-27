@@ -1,26 +1,23 @@
 package Model.dao;
-import java.sql.*;
 import com.mysql.cj.jdbc.MysqlDataSource;
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 public class DB extends MysqlDataSource {
     static final String Driver = "com.mysql.jdbc.Driver";
-    static final String url = "jdbc:mysql://localhost:3306/crud";
+    static final String url = "jdbc:mysql://localhost:3306/mydb";
     static final String username = "root";
     static final String password = "";
 
 
     private static DB theInstance;
     public static final String PROPERTIES_FILE_NAME="/db.properties";
-    private Connection cnx;
+    private static Connection cnx;
 
     public static DB instance(){
         if (theInstance==null){
@@ -36,6 +33,9 @@ public class DB extends MysqlDataSource {
 
     public Connection getConnection() {
         try {
+            Class.forName(Driver);
+            /*cnx = */DriverManager.getConnection(url,username,password);
+            //return cnx;
             return DriverManager.getConnection(url,username,password);
         } catch (Exception e) {
             System.err.println(e.getMessage());
@@ -43,11 +43,28 @@ public class DB extends MysqlDataSource {
             return null;
         }
     }
-/*
-    public PreparedStatement prepareStatement(String statement) throws SQLException {
 
+    public static Connection conect() {
+        Connection conn = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/mydb", "root", "");
+        } catch (Exception exception) {
+            Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, exception);
+        }
+        return conn;
+    }
+
+    public static void closeCnx()throws SQLException {
+        if(cnx != null){
+            cnx.close();
+        }
+    }
+
+    public PreparedStatement prepareStatement(String statement) throws SQLException {
         return cnx.prepareStatement(statement);
     }
+
     public int executeUpdate(PreparedStatement statement) {
         try {
             statement.executeUpdate();
@@ -56,30 +73,8 @@ public class DB extends MysqlDataSource {
             return 0;
         }
     }
-    public ResultSet executeQuery(PreparedStatement statement){
-        try {
-            return statement.executeQuery();
-        } catch (SQLException ex) {
-        }
-        return null;
-    }
-
-*/
 
 
 
-
-
-
-
-/*
-    public static void createTable()throws Exception{
-        try{
-            Connection connection = getConnection();
-            PreparedStatement create = connection.prepareStatement("CREATE TABLE IF NOT EXISTS databaseProject(id int NOT NULL AUTO_INCREMENT,first varchar(255), last (255), PRIMARY KEY(id))");
-            create.executeUpdate();
-        }catch(Exception ex){System.out.println(ex);}
-        finally{System.out.print("Ready");}
-    }*/
 
 }
